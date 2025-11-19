@@ -138,7 +138,7 @@ const vueConfig = {
     port: 5317,
     proxy: {
       '/api': {
-        target: 'https://vue2-admin.onrender.com/',
+        target: 'https://vue2-admin.onrender.com',
         ws: false,
         changeOrigin: true,
         pathRewrite: {

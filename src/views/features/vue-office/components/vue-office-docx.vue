@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import '@vue-office/docx/lib/v3/index.css'
+import '@vue-office/docx/lib/index.css'
 
-import VueOfficeDocx from '@vue-office/docx/lib/v3/vue-office-docx.mjs'
+import VueOfficeDocx from '@vue-office/docx/lib/v2/vue-office-docx.mjs'
 
 import DocxFile from '@/assets/office/test.docx'
 import { I18nVueOffice } from '@/constant/i18n'

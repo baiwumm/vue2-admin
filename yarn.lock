@@ -2258,6 +2258,11 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@vercel/analytics@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npmmirror.com/@vercel/analytics/-/analytics-1.5.0.tgz#073f93694897414b21a8495e2619bbf64447dcaa"
+  integrity sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==
+
 "@vue-office/docx@^1.6.2":
   version "1.6.2"
   resolved "https://registry.npmmirror.com/@vue-office/docx/-/docx-1.6.2.tgz#c97d28db60db5325dd351d90b0202dd3d54ad427"

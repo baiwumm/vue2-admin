@@ -1,0 +1,21 @@
+# .github/workflows/keep-render-active.yml
+name: Keep Render Service Active
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # 每月1号
+  workflow_dispatch:       # 👈 关键！允许手动触发 
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout server branch
+        uses: actions/checkout@v4
+        with:
+          ref: server  # 必须指定分支
+
+      - name: Create empty commit and push
+        run: |
+          git config user.name "baiwumm"
+          git config user.email "me@baiwumm.com"
+          git commit --allow-empty -m "chore: keep Render service active [skip ci]"
+          git push origin server

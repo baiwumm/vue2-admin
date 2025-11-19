@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import '@vue-office/excel/lib/index.css'
+import '@vue-office/excel/lib/v3/index.css'
 
-import VueOfficeExcel from '@vue-office/excel'
+import VueOfficeExcel from '@vue-office/excel/lib/v3/vue-office-excel.mjs'
 
 import XlsxFile from '@/assets/office/test.xlsx'
 import { I18nVueOffice } from '@/constant/i18n'

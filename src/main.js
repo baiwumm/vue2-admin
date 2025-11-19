@@ -8,6 +8,7 @@ import 'zm-tree-org/lib/zm-tree-org.css'
 import 'swiper/css/swiper.css'
 
 import ProLayout, { PageHeaderWrapper } from '@ant-design-vue/pro-layout'
+import { inject } from '@vercel/analytics'
 import Vue from 'vue'
 import ZmTreeOrg from 'zm-tree-org'
 
@@ -20,6 +21,18 @@ import store from './store/'
 import { VueAxios } from './utils/request'
 
 Vue.config.productionTip = false
+
+  if (process.env.NODE_ENV === 'production') {
+  (function () {
+    // Vercel 统计
+    inject()
+    const script = document.createElement('script')
+    script.defer = true
+    script.src = 'https://um.baiwumm.com/script.js'
+    script.setAttribute('data-website-id', 'e35f000c-13be-4b09-93a0-d60b5a0eb87d')
+    document.head.appendChild(script)
+  })()
+}
 
 // mount axios to `Vue.$http` and `this.$http`
 Vue.use(VueAxios)

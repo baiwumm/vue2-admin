@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import VueOfficePdf from '@vue-office/pdf'
+import VueOfficePdf from '@vue-office/pdf/lib/v3/vue-office-pdf.mjs'
 
 import PdfFile from '@/assets/office/test.pdf'
 import { I18nVueOffice } from '@/constant/i18n'
